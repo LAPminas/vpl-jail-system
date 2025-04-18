@@ -4,6 +4,9 @@ FROM ${VPL_BASE_DISTRO}
 
 USER root:root
 
+# Crea el entorno jail vacío
+RUN mkdir -p /opt/vpl-jail/jail
+
 # Set default install levels: minimum < basic < standard < full
 ARG VPL_INSTALL_LEVEL=full
 ARG VPL_JAIL_JAILPATH=/
